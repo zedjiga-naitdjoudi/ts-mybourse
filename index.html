@@ -1,13 +1,65 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mybourse</title>
+    <title>MyBourse</title>
   </head>
+
   <body>
-    <div id="app"></div>
+    <div id="app">
+
+      <header id="header">
+        <h1>MyBourse</h1>
+        <p>Suivez l'évolution des actions en temps réel</p>
+      </header>
+
+      <section id="controls">
+        <!-- action1 -->
+        <div class="control-group">
+          <label for="stock1-select">Action 1</label>
+          <select id="stock1-select">
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="stock2-select">Action 2</label>
+          <select id="stock2-select">
+          </select>
+        </div>
+        <!-- action2 -->
+        <div class="control-group">
+          <label>Période</label>
+          <div id="period-buttons">
+            <button class="period-btn active" data-period="1W">1 Sem</button>
+            <button class="period-btn" data-period="1M">1 Mois</button>
+            <button class="period-btn" data-period="1Y">1 An</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="chart-type-select">Type de graphique</label>
+          <select id="chart-type-select">
+            <option value="line">Courbe</option>
+            <option value="bar">Barres</option>
+          </select>
+        </div>
+
+      </section>
+
+      <div id="error-zone" style="display:none;">
+        <span id="error-message"></span>
+      </div>
+
+      <section id="stats-container">
+      </section>
+
+      <section id="chart-container">
+        <canvas id="main-chart"></canvas>
+      </section>
+
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
