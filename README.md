@@ -9,6 +9,10 @@ Application web permettant de comparer l'évolution du cours de deux actions bou
 ```bash
 npm i
 ```
+ **Note :** Assurez-vous que `chartjs-adapter-date-fns` et `date-fns` sont installés (requis pour les échelles de temps des graphiques) :
+```bash
+npm install chartjs-adapter-date-fns date-fns
+```
 
 ## Lancement
 
